@@ -1,0 +1,55 @@
+.Main {
+  height: 667px;
+  width: auto;
+  margin: 0px auto;
+  border-radius: 0px;
+}
+.header_Text {
+  height: 21px;
+  width: 173px;
+  margin: 0px auto;
+  font-family: "JetBrains Mono";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #817d92;
+}
+
+.password_Generator_Container {
+  height: 503px;
+  width: 343px;
+  margin: 16px auto;
+}
+.passowrd_Generator_output {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 190px;
+  height: 64px;
+  width: 343px;
+  background: #24232c;
+}
+.password_Generator_Text {
+  height: 32px;
+  width: auto;
+  margin-left: 10px;
+  font-family: "JetBrains Mono";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #e6e5ea;
+}
+
+.password_Generator_Copping {
+  height: 20px;
+  width: 17.5px;
+}
+.password_generator_copping:hover {
+  cursor: pointer;
+  height: 20px;
+  width: 17.5px;
+}
