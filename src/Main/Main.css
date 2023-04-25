@@ -53,3 +53,189 @@
   height: 20px;
   width: 17.5px;
 }
+
+.password_Generator_Sub_Container {
+  height: 423px;
+  width: 343px;
+  margin: 16px auto;
+  background: #24232c;
+}
+
+.password_Generator_Number_Controle_Box {
+  height: 67px;
+  width: 311px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+}
+.password_Generator_Number_Indicator__Text_box {
+  height: 31px;
+  width: 311px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 70px;
+}
+
+.password_Generator_Number_Controle_Text {
+  height: 21px;
+  width: 200px;
+  font-family: "JetBrains Mono";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #e6e5ea;
+}
+.password_Generator_Number_Controle_Number {
+  height: 32px;
+  width: 35px;
+  font-family: "JetBrains Mono";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #a4ffaf;
+}
+.password_Generator_Number_Controle {
+  height: 8px;
+  width: 311px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #18171f;
+  margin: 18px auto;
+}
+.password_Generator_Number_Controle_Fill {
+  height: 8px;
+  width: 156px;
+  background: #a4ffaf;
+}
+.password_Generator_Number_Controle_Button {
+  height: 28px;
+  width: 28px;
+  background: #e6e5ea;
+  border-radius: 20px;
+}
+.password_Generator_Number_Controle_Button:hover {
+  cursor: pointer;
+}
+.password_Generator_Number_Controle_Button:active {
+  background: #cdc9db;
+}
+.password_Generator_Special_Char_Controle_Box {
+  height: 67px;
+  width: 311px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+}
+.password_Generator_Charasteristics_Box {
+  height: 132px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+
+  margin: 32px auto;
+}
+.password_Generator_Charasteristics {
+  height: 21px;
+  width: 310px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.password_Generator_Checkbox {
+  height: 20px;
+  width: 20px;
+  background: #a4ffaf;
+}
+.password_Generator_Charasteristics_Text {
+  height: 21px;
+  width: 280px;
+  font-family: "JetBrains Mono";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #e6e5ea;
+}
+.password_Generator_Strength_Box {
+  height: 56px;
+  width: 311px;
+  margin: 16px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 57px;
+}
+.password_Generator_Strength_Text {
+  height: 21px;
+  width: 77px;
+  font-family: "JetBrains Mono";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #817d92;
+  margin-left: 16px;
+}
+.password_Generator_Strength_Indicator {
+  height: 28px;
+  width: 155px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "JetBrains Mono";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #e6e5ea;
+}
+.password_Generator_Strength_Indicator_Fill {
+  height: 28px;
+  width: 10px;
+  background: #f8cd65;
+  margin-left: 10px;
+}
+.password_Generator_Generate_Box {
+  height: 56px;
+  width: 311px;
+  margin: 16px 16px;
+  background: #a4ffaf;
+}
+.password_Generator_Generate_Box:hover {
+  cursor: pointer;
+}
+
+.password_Generator_Generate_Box:active {
+  background: #8edc8e;
+}
+.password_Generator_Generate_Box_Text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 21px;
+  width: 104.10540771484375px;
+  margin: 0px auto;
+  font-family: "JetBrains Mono";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #24232c;
+}
+.arrow {
+  height: 12px;
+  width: 11.10540771484375px;
+  margin-left: 16px;
+}
