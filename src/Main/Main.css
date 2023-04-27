@@ -7,7 +7,7 @@
 .header_Text {
   height: 21px;
   width: 173px;
-  margin: 0px auto;
+  margin: 36px auto;
   font-family: "JetBrains Mono";
   font-size: 16px;
   font-weight: 700;
@@ -48,7 +48,7 @@
   height: 20px;
   width: 17.5px;
 }
-.password_generator_copping:hover {
+.password_Generator_Copping:hover {
   cursor: pointer;
   height: 20px;
   width: 17.5px;
@@ -107,24 +107,47 @@
   align-items: center;
   background: #18171f;
   margin: 18px auto;
+  position: relative;
 }
 .password_Generator_Number_Controle_Fill {
   height: 8px;
   width: 156px;
   background: #a4ffaf;
+  pointer-events: none;
 }
-.password_Generator_Number_Controle_Button {
+.password_Generator_Number_Controle_Slider {
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: transparent;
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.password_Generator_Number_Controle_Slider::-webkit-slider-thumb {
+  appearance: none;
   height: 28px;
   width: 28px;
   background: #e6e5ea;
   border-radius: 20px;
-}
-.password_Generator_Number_Controle_Button:hover {
   cursor: pointer;
 }
-.password_Generator_Number_Controle_Button:active {
+.password_Generator_Number_Controle_Slider::-webkit-slider-thumb:active {
   background: #cdc9db;
 }
+.password_Generator_Number_Controle_Slider::-moz-range-thumb {
+  height: 28px;
+  width: 28px;
+  background: #e6e5ea;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.password_Generator_Number_Controle_Slider::-moz-range-thumb:active {
+  background: #cdc9db;
+}
+
 .password_Generator_Special_Char_Controle_Box {
   height: 67px;
   width: 311px;
@@ -173,6 +196,7 @@
   flex-direction: row;
   align-items: center;
   gap: 57px;
+  background: #18171f;
 }
 .password_Generator_Strength_Text {
   height: 21px;
@@ -192,6 +216,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  gap: 5px;
   font-family: "JetBrains Mono";
   font-size: 18px;
   font-weight: 700;
@@ -204,7 +230,8 @@
   height: 28px;
   width: 10px;
   background: #f8cd65;
-  margin-left: 10px;
+
+  margin-left: 5px;
 }
 .password_Generator_Generate_Box {
   height: 56px;
