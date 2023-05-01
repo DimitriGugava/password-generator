@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 190px;
+  justify-content: space-between; /* Added */
   height: 64px;
   width: 343px;
   background: #24232c;
@@ -34,7 +34,7 @@
 .password_Generator_Text {
   height: 32px;
   width: auto;
-  margin-left: 10px;
+  margin-left: 5px;
   font-family: "JetBrains Mono";
   font-size: 24px;
   font-weight: 700;
@@ -45,15 +45,21 @@
 }
 
 .password_Generator_Copping {
-  height: 20px;
-  width: 17.5px;
-}
-.password_Generator_Copping:hover {
   cursor: pointer;
   height: 20px;
+  margin-right: 7px;
   width: 17.5px;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
+.password_Generator_Copping:hover {
+  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.password_Generator_Copping:active {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
 .password_Generator_Sub_Container {
   height: 423px;
   width: 343px;
@@ -115,6 +121,7 @@
   background: #a4ffaf;
   pointer-events: none;
 }
+
 .password_Generator_Number_Controle_Slider {
   appearance: none;
   width: 100%;
@@ -200,7 +207,7 @@
 }
 .password_Generator_Strength_Text {
   height: 21px;
-  width: 77px;
+  width: 127px;
   font-family: "JetBrains Mono";
   font-size: 16px;
   font-weight: 700;
@@ -216,7 +223,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
   gap: 5px;
   font-family: "JetBrains Mono";
   font-size: 18px;
@@ -229,9 +235,17 @@
 .password_Generator_Strength_Indicator_Fill {
   height: 28px;
   width: 10px;
-  background: #f8cd65;
 
   margin-left: 5px;
+}
+.fill-yellow {
+  background-color: yellow;
+}
+.fill-red {
+  background-color: red;
+}
+.fill-green {
+  background-color: green;
 }
 .password_Generator_Generate_Box {
   height: 56px;

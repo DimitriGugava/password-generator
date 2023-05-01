@@ -7,6 +7,11 @@ const Main = () => {
   const [volume, setVolume] = useState(1);
   const [strengthText, setStrengthText] = useState("Very Weak");
   const [fillCount, setFillCount] = useState(1);
+  const [password, setPassword] = useState("");
+  const [uppercase, setUppercase] = useState(false);
+  const [lowercase, setLowercase] = useState(false);
+  const [numbers, setNumbers] = useState(false);
+  const [symbols, setSymbols] = useState(false);
 
   useEffect(() => {
     handleStrengthChange();
@@ -32,13 +37,58 @@ const Main = () => {
     }
   };
 
+  const generatePassword = () => {
+    let passwordCharacters = "";
+    const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
+    const numbersList = "0123456789";
+    const symbolsList = "!@#$%^&*()-_=+[]{}|;:,.<>?/";
+
+    if (uppercase) {
+      passwordCharacters += upperLetters;
+    }
+    if (lowercase) {
+      passwordCharacters += lowerLetters;
+    }
+    if (numbers) {
+      passwordCharacters += numbersList;
+    }
+    if (symbols) {
+      passwordCharacters += symbolsList;
+    }
+
+    let generatedPassword = "";
+    for (let i = 0; i < volume; i++) {
+      generatedPassword += passwordCharacters.charAt(
+        Math.floor(Math.random() * passwordCharacters.length)
+      );
+    }
+
+    setPassword(generatedPassword);
+  };
+
+  const copyToClipboard = () => {
+    if (!password) return;
+
+    const textarea = document.createElement("textarea");
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+  };
+
   return (
     <div className="Main">
       <h1 className="header_Text">Password Generator</h1>
       <div className="password_Generator_Container">
         <div className="passowrd_Generator_output">
-          <p className="password_Generator_Text">Password</p>
-          <img className="password_Generator_Copping" src={copied} />
+          <a className="password_Generator_Text">{password || "Password"}</a>
+          <img
+            className="password_Generator_Copping"
+            src={copied}
+            onClick={copyToClipboard}
+          />
         </div>
 
         <div className="password_Generator_Sub_Container">
@@ -69,34 +119,48 @@ const Main = () => {
           </div>
           <div className="password_Generator_Charasteristics_Box">
             <div className="password_Generator_Charasteristics">
-              <input type="checkbox" className="password_Generator_Checkbox" />
+              <input
+                type="checkbox"
+                className="password_Generator_Checkbox"
+                onChange={(e) => setUppercase(e.target.checked)}
+              />
               <a className="password_Generator_Charasteristics_Text">
                 Include Uppercase Letters
               </a>
             </div>
             <div className="password_Generator_Charasteristics">
-              <input type="checkbox" className="password_Generator_Checkbox" />
+              <input
+                type="checkbox"
+                className="password_Generator_Checkbox"
+                onChange={(e) => setLowercase(e.target.checked)}
+              />
               <a className="password_Generator_Charasteristics_Text">
                 Include Lowercase Letters
               </a>
             </div>
             <div className="password_Generator_Charasteristics">
-              <input type="checkbox" className="password_Generator_Checkbox" />
+              <input
+                type="checkbox"
+                className="password_Generator_Checkbox"
+                onChange={(e) => setNumbers(e.target.checked)}
+              />
               <a className="password_Generator_Charasteristics_Text">
                 Include Numbers
               </a>
             </div>
             <div className="password_Generator_Charasteristics">
-              <input type="checkbox" className="password_Generator_Checkbox" />
+              <input
+                type="checkbox"
+                className="password_Generator_Checkbox"
+                onChange={(e) => setSymbols(e.target.checked)}
+              />
               <a className="password_Generator_Charasteristics_Text">
                 Include Symbols
               </a>
             </div>
           </div>
           <div className="password_Generator_Strength_Box">
-            <p className="password_Generator_Strength_Text">
-              Strength: {strengthText}
-            </p>
+            <p className="password_Generator_Strength_Text">{strengthText}</p>
             <div className="password_Generator_Strength_Indicator">
               <div
                 className={`password_Generator_Strength_Indicator_Fill ${
@@ -120,7 +184,10 @@ const Main = () => {
               ></div>
             </div>
           </div>
-          <button className="password_Generator_Generate_Box">
+          <button
+            className="password_Generator_Generate_Box"
+            onClick={generatePassword}
+          >
             <p className="password_Generator_Generate_Box_Text">
               Generate
               <img src={arrow} className="arrow" />
